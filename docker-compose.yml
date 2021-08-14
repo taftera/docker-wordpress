@@ -5,10 +5,10 @@ services:
     build:
       context: .
       dockerfile: nginx.dockerfile
-    depends_on: 
+    depends_on:
       - php
       - mysql
-      - phpmyadmin
+      # - phpmyadmin
     ports:
       - 80:80
       - 443:443
@@ -33,15 +33,15 @@ services:
       - ./wordpress:/var/www/html:delegated
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
+    image: phpmyadmin/phpmyadmin
     depends_on:
       - mysql
     ports:
       - 8000:80
     environment:
-      PMA_PORT: 3306
+      # PMA_PORT: 3306
       PMA_HOST: mysql
-      PMA_USER:  wp
+      PMA_USER: wp
       PMA_PASSWORD: secret
 
   wp:
