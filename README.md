@@ -15,14 +15,25 @@ https://wordpress-docker.test/
 ### PHPMYADMIN
 http://wordpress-docker.test:8000/
 
+### MYSQL Connect
+```base
+$ docker exec -it docker-lamp_mysql_1 mysql -uroot -p
+```
+**docker-lamp_mysql_1** stands for the MYSQL container name
+- [more info](https://rednafi.github.io/digressions/database/2020/03/15/mysql-install.html)
+
 ### DOCKER Commands
 ```bash
 # When something on the *.dockerfile changes
 $ docker-compose up -d --build
 # When something pull down all changes
 $ docker-compose down -d --build
-# Get all containers active
+# Get containers active on project
 $ docker-compose ps
+# Get all containers active and its id
+$ docker ps 
+# Copy files from image to folder
+$ docker cp imageID:/file ./folder
 ```
 ### WP-CLI - [URL](https://wp-cli.org/)
 
