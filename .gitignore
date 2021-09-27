@@ -10,6 +10,8 @@ wordpress/wp-content/*
 !wordpress/wp-content/mu-plugins/
 !wordpress/wp-content/plugins/
 !wordpress/wp-content/themes/
+# retract theme functions.php
+!wordpress/wp-content/themes/twentytwentyone/functions.php
 
 # ignore specific themes
 wordpress/wp-content/themes/twenty*/

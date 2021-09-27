@@ -53,3 +53,15 @@ $ cd /nginx/certs
 $ mkcert wordpress-docker.test
 ```
 **NOTE:** remember to update the ``` etc/hosts ``` to be able to log to the domain.
+
+#### Docker commands
+```bash
+# list images
+$ docker image ls --all
+# explore image
+$ docker run -it image_name sh  
+# NGINX ❯ nginx.conf to increase the size of uploads
+$ docker cp docker-wordpress_nginx_1:/etc/nginx/nginx.conf ./nginx/
+# PHP ❯ get php.ini
+$ docker cp docker-wordpress_php_1:/usr/local/etc/php/php.ini-production ./php/
+```
